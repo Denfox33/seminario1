@@ -124,12 +124,30 @@ fun ej10(numero : Int) :Int{
     var numero=0;
     var contador :Int =0;
     for (i in numero until numero){
-
-        contador++;
-        numero=contador;
-
         suma=numero+contador;
+
+        numero=contador;
+        contador++;
+
 
     }
 return suma;
+}
+
+//Ejercicio 11. Crea una función que determine si dos números son primos relativos.
+//Se dice que dos números son relativamente primos si su factor común más grande ( FCG ) es 1. Ejemplo 1: Los factores de 20 son
+// 1, 2, 4, 5, 10 y 20. Los factores de 33 son 1, 3, 11, y 33.
+
+fun ej11 (num1 : Int, num2: Int ) :Boolean{
+    var primo=true;
+    for (i in num1 until num2){
+
+        if(num1/i == 0 and num2/i==0 and i!=1){
+
+             primo=true;
+        } else {
+            primo =false;
+        }
+    }
+    return primo
 }
